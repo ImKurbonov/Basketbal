@@ -1,0 +1,66 @@
+body {
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.rotate {
+    animation: rotate 0.1s linear infinite;
+}
+
+.ball-container {
+    animation: ball 3s linear infinite;
+    position: absolute;
+    left: 0;
+    bottom: 3%;
+}
+
+.ball {
+    animation: rotate 0.5s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sheet {
+    position: absolute;
+    z-index: 10;
+}
+
+@keyframes ball {
+    0% {
+        bottom: 3%;
+    }
+
+    25% {
+        bottom: 80%;
+        left: 20%;
+    }
+
+    50% {
+        bottom: 3%;
+        left: 50%;
+    }
+
+    75% {
+        bottom: 80%;
+        left: 75%;
+    }
+
+    100% {
+        bottom: 3%;
+        left: 93%;
+    }
+    
+}
